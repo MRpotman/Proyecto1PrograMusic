@@ -1,0 +1,211 @@
+*{
+  font-family: Georgia, serif;
+}
+*{
+    font-family: Georgia, serif;
+}
+
+.navbar{
+    background-color: white;
+    height: 80px;
+    border-radius: 16px ;
+    padding: 0.5rem;
+}
+
+.navbar-brand{
+    font-weight: 500;
+    color: black;
+    font-size: 25px;
+    transition: 0,3s color;
+}
+
+.login-button{
+    background-color:#eee;
+    color: black;
+    font-size: 20px ;
+    padding: 5px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s ;
+}
+
+.login-button:hover{
+   background-color: lightgray;
+   
+}
+
+.user-button{
+    background-color: white;
+    color: black;
+    font-size: 20px ;
+    padding: 5px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s ;
+}
+
+
+.user-button:hover{
+   background-color: lightgray;
+}
+
+
+
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-toggler:focus .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color:black ;
+    font-weight: 500;
+    position: relative;
+    font-size: 20px;
+}
+
+@media(min-width:991px){
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 2px;
+    background-color: darkgray;
+    visibility: hidden;
+    transition: width 0.3s ease-in-out; 
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    visibility: visible;
+}
+
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+}
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+}
+
+.background {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("https://i.pinimg.com/1200x/f1/6c/8e/f16c8e6cc11cb26c03b27eb90e5d2c7a.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.text-box{
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:
+  translate(-50%,-50%);
+  text-align: left;
+ }
+
+.text-box h1{
+  font-size: 62px;
+}
+
+.text-box p{
+  margin: 10px 0 40px;
+  font-size: 20px;
+  color: white;
+}
+
+@media (max-width:  700px){
+  .text-box h1{
+  font-size: 20px;
+  }
+}
+
+.course{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1{
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p{
+  color: #777;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  }
+
+.row{
+  margin-top: 5%;
+  display: flexible;
+  justify-content: space-between;
+}
+
+.row .course-col{
+  flex-basis: 31%;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h3{
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  color: black;
+}
+.course-col:hover{
+  box-shadow: 0 0 20px 0px rgba(0,0, 0, 0.2);
+}
+
+@media (max-width: 700px){
+  .row{
+  flex-direction: column;
+  }
+  }
+
+
+
+  .bg-frisado {
+    margin-top: 100px;
+    background-color: #f5f5f5;
+    background-size: cover;
+    color: black; 
+}
+
+.title-bold{
+font-weight: bold;
+}
