@@ -3,7 +3,7 @@ FROM php:8.3-cli
 WORKDIR /var/www/html
 
 RUN apt-get update && apt-get install -y \
-    curl zip unzip git libsqlite3-dev libzip-dev libonig-dev \
+    curl zip unzip git libsqlite3-dev libzip-dev libonig-dev nodejs npm \
     && docker-php-ext-install pdo pdo_sqlite zip mbstring
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -11,6 +11,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
+RUN npm install && npm run build
 
 RUN chmod -R 775 storage bootstrap/cache
 
