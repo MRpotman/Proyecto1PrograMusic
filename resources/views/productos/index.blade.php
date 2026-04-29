@@ -314,6 +314,15 @@
   </div>
 </div>
 
+{{-- PAGINACIÓN --}}
+@if($productos->hasPages())
+<div class="container pb-4">
+  <div class="d-flex justify-content-center">
+    {{ $productos->appends(request()->query())->links('pagination::bootstrap-5') }}
+  </div>
+</div>
+@endif
+
 <!-- ================= CREATE MODAL ================= -->
 <div class="modal fade" id="createProductModal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">

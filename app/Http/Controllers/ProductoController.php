@@ -46,7 +46,7 @@ class ProductoController extends Controller
         $query->where('precio', '<=', $request->max);
     }
 
-    $productos = $query->get();
+    $productos = $query->paginate(12);
 
     $artistas = Artista::all();
     $generos = Genero::all();
